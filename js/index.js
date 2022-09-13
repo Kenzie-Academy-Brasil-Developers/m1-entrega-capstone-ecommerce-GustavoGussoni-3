@@ -12,9 +12,20 @@ function listarProdutos(produto , ref){
     for(let i = 0; i < 3; i++){
         let item = produto[i]                
         let templateMontado = criarTemplate(item)        
-        ref.appendChild(templateMontado)       
+        ref.appendChild(templateMontado)
+               
 
     } 
+    
+    //PAREI AQUI, NÃO ESTÁ RETORNANDO OS BOTÕES DE BAIXO
+    let botoesProdutos = document.getElementsByClassName("product-add")
+
+    for(let i = 0; i < botoesProdutos.length; i++){
+        let botao = botoesProdutos[i];    
+        botao.addEventListener('click', function(event){
+            console.log(botoesProdutos[i])
+        }) 
+    }
     
 }
 listarProdutos(data, listaProdutos)
@@ -80,13 +91,4 @@ function criarTemplate(produto){
 // console.dir(criarTemplate(data))
 
     
-// let botoesProdutos = document.getElementsByClassName("product-add")
 
-//     for(let i = 0; i < botoesProdutos.length; i++){
-//         let botao = botoesProdutos[i];    
-//         botao.addEventListener('click', function(event){
-//             let elemento = event.target;
-//             let idElemento = elemento.id
-//             console.dir(idElemento)
-//         }) 
-//     }
