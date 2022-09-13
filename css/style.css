@@ -28,6 +28,7 @@ html, body, figure, img, div, input, textarea, p, h1, h2, h3, h4, h5, h6, ul,li,
     gap: 15px;
     list-style: none;      
 }
+
 .div-ul-two {
     display: flex;
 }
@@ -36,7 +37,7 @@ html, body, figure, img, div, input, textarea, p, h1, h2, h3, h4, h5, h6, ul,li,
     display: flex;
     flex-direction: column;
     gap: 10px;    
-    border: 3px solid #F5F5F5;
+    border: 1px solid #F5F5F5;
 }
 
 .div-ul-two li div{
@@ -67,15 +68,16 @@ html, body, figure, img, div, input, textarea, p, h1, h2, h3, h4, h5, h6, ul,li,
     display: flex;
     
     
+    
 }
 .div-ul-three li{
     margin: 21px;
     display: flex;
     flex-direction: column;
     gap: 10px;    
-    border: 3px solid #F5F5F5;
-
+    border: 1px solid #F5F5F5;
 }
+
 .container-three{
     display: flex;
     flex-direction: column;
@@ -128,17 +130,23 @@ html, body, figure, img, div, input, textarea, p, h1, h2, h3, h4, h5, h6, ul,li,
     width: auto;
     height: 250px;
     background-color: #F5F5F5;
-    display: flex;
-    flex-direction: column;
+    /* display: flex;
+    flex-direction: column; */
     align-items:center;
     justify-content: center;
     overflow-x: auto;
+}
+.info-itens{
+    display: flex;
+    flex-direction: column;    
+    align-items: center;
+    margin-top: 70px;
 }
 
 .div-pai-car{
     display: flex;
     flex-direction: column;
-    margin-top: 35px;
+    margin-top: 10px;
 }
 .div-car {
     display: flex;
@@ -181,3 +189,11 @@ html, body, figure, img, div, input, textarea, p, h1, h2, h3, h4, h5, h6, ul,li,
     color: #fff;
     margin: 25px;
 }
+
+.div-ul :hover{
+    color: #37268c;
+    background-color:#F5F5F5;
+}
+/* .div-ul-three li :hover {    
+    border: 3px solid #37268c;
+} */
