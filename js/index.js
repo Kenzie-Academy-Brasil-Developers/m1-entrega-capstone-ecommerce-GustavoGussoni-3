@@ -34,16 +34,15 @@ function listarProdutosDois(produto , ref){
         ref.appendChild(templateMontado)                         
     } 
     let botoesProdutos = document.querySelectorAll(".div-ul-three .product-add")    
-                
+    let carrinhoVazio = document.querySelector(".div-itens .info-itens")            
         for(let i = 0; i < botoesProdutos.length; i++){
         let botao = botoesProdutos[i];    
         botao.addEventListener('click', function(event){
-
         let elemento = event.target
         let idElemento = parseInt(elemento.id)
-
         let obj = procuraItem(idElemento)       
-        criarTemplateCarrinho(obj)                    
+        criarTemplateCarrinho(obj)   
+        carrinhoVazio.remove()                 
         
         }) 
     }        
@@ -83,9 +82,11 @@ function criarTemplate(produto){
     let tagName   = document.createElement("h2")
     let tagPar    = document.createElement("p")
     let tagValor  = document.createElement("p")
-    let tagAdd    = document.createElement("button")
+    let tagAdd    = document.createElement("a")
 
     tagInfo.classList.add("div-p")
+    tagPar.classList.add("par-cards")
+    tagValor.classList.add("valor-cards")
 
     tagCatImg.src      = `${imagem}`
     tagCatImg.alt      = `${nome}`
@@ -97,6 +98,9 @@ function criarTemplate(produto){
     tagAdd.innerText   = `${carrinho}`
     tagAdd.className   = ("product-add")    
     tagAdd.id          = `${identificacao}`
+    tagLi.className    = ("li-cards")
+    
+    
 
     tagCat.appendChild(tagCatImg)
     tagLi.appendChild(tagCat)
@@ -139,7 +143,7 @@ function criarTemplateCarrinho(prod){
     
     remove.addEventListener('click', function(event){        
         let li = event.path[2]        
-        li.remove()      
+        li.remove()                
         
     })
     // let carrinhoVazio = document.querySelector(".div-itens")

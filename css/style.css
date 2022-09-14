@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
 html, body, figure, img, div, input, textarea, p, h1, h2, h3, h4, h5, h6, ul,li, a{
     margin: 0;
     padding: 0;
@@ -6,6 +8,9 @@ html, body, figure, img, div, input, textarea, p, h1, h2, h3, h4, h5, h6, ul,li,
     text-decoration: none;   
     color: black;    
    
+}
+body{
+    font-family: 'Inter', sans-serif;
 }
 .container{
     width: 1200px;
@@ -114,7 +119,10 @@ html, body, figure, img, div, input, textarea, p, h1, h2, h3, h4, h5, h6, ul,li,
     margin: 21px;
 }
 .div-p{
-    display: flex;    
+    font-size: 10px;
+    display: flex;
+    align-items: center;  
+    justify-content: center;  
     background-color: #2E245E;
     color: #fff;
     padding: 5px;
@@ -194,6 +202,31 @@ html, body, figure, img, div, input, textarea, p, h1, h2, h3, h4, h5, h6, ul,li,
     color: #37268c;
     background-color:#F5F5F5;
 }
-/* .div-ul-three li :hover {    
+.li-cards:hover {    
     border: 3px solid #37268c;
-} */
+    transition: 0.1s;
+}
+.product-add{
+    font-size: 12px;
+    margin-bottom: 2px;
+}
+
+.product-add:hover{
+    background-color: white;
+    border-color: white;
+    color: #37268c;
+    font-weight: bold;
+    font-size: 13px;
+    transition: 0.3s;
+
+}
+.li-cards h2 {
+    font-size: 20px;
+}
+.par-cards{
+    font-size: 10px;
+}
+.valor-cards{
+    font-size: 14px;
+    color: #37268c;
+}
